@@ -12,9 +12,11 @@ import subprocess
 
 def get_met():
 
+    tease = os.envron['TEASE']
+
     proxies = {
-    'http': 'http://proxy.divms.uiowa.edu:8888',
-    'https': 'https://proxy.divms.uiowa.edu:8888',
+    'http': f'http:zjgilliam:{tease}//proxy.divms.uiowa.edu:8888',
+    'https': f'https://zjgilliam:{tease}proxy.divms.uiowa.edu:8888',
     }
 
 
@@ -61,10 +63,11 @@ def get_met():
     return study_result_ids
 
 def get_data(study_result_ids):
+    tease = os.envron['TEASE']
 
     proxies = {
-    'http': 'http://proxy.divms.uiowa.edu:8888',
-    'https': 'https://proxy.divms.uiowa.edu:8888',
+    'http': f'http:zjgilliam:{tease}//proxy.divms.uiowa.edu:8888',
+    'https': f'https://zjgilliam:{tease}proxy.divms.uiowa.edu:8888',
     }
 
     headers = {
